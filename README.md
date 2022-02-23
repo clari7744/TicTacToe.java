@@ -1,2 +1,1 @@
-# TicTacToe.java
-TicTacToe, but in Java this time
+### Just type `./run.sh`
