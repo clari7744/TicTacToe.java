@@ -10,7 +10,7 @@ public class Board {
 		inner = new Player[3][3];
 		this.game = game;
 		this.utils = utils;
-		sep = "-----------------\n";
+		sep = "―――――――――――――――――\n";
 	}
 
 	public void clear() {
@@ -135,9 +135,10 @@ public class Board {
 		nice[0] = Colors.BOLD +(rowNum+1) + Colors.RE;
 		for (int i = 0; i < row.length; i++)
 			nice[i + 1] = row[i] == null ? " " : row[i].getSymbol();
-		return "| " + String.join(" | ", nice) + " |\n";
-		// return String.format("| %s | %s | %s | %s |\n", "ABC".charAt(rowNum),
-		// nice[0], nice[1], nice[2]);
+		return niceRow(nice);
+	}
+	public String niceRow(String[] row){
+		return "| " + String.join(" | ", row) + " |\n";
 	}
 
 	public String toString() {

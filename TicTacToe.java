@@ -51,7 +51,7 @@ public class TicTacToe {
 		 * @param input The input given by the player.
 		 * @return Whether or not the input was a special command.
 		 */
-		if (input.equals("help")||input.equals("h")) {
+		if (input.equals("help") || input.equals("h")) {
 			System.out.println("Commands:");
 			System.out.println("help/h - Displays this help message.");
 			System.out.println("restart/r - Restarts the game.");
@@ -98,8 +98,8 @@ public class TicTacToe {
 		}
 		if (resp.equals("cancel"))
 			return;
-		if (resp.equals("aimode")){
-			System.out.println((u.toggleAiMode()?"en":"dis")+"abled AI mode for "+u.getName());
+		if (resp.equals("aimode")) {
+			System.out.println((u.toggleAiMode() ? "en" : "dis") + "abled AI mode for " + u.getName());
 			return;
 		}
 		utils.quest(String.format("Enter new %s for %s:", resp, u.getName()));
@@ -171,8 +171,7 @@ public class TicTacToe {
 		if (ai.equalsIgnoreCase("y")) {
 			p.toggleAiMode();
 			System.out.println("Set " + p.getName() + " to AI mode.");
-		}
-		else if (ai.equalsIgnoreCase("ygood")) {
+		} else if (ai.equalsIgnoreCase("ygood")) {
 			p.toggleAiMode(true);
 			System.out.println("Enabled good AI mode for " + p.getName());
 		}
