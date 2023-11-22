@@ -1,4 +1,3 @@
-import java.lang.Thread;
 import java.util.ArrayList;
 
 public class Player {
@@ -117,12 +116,12 @@ public class Player {
 	public String getGoodMove(Board board) {
 		String ret = "";
 		Player[][] b = board.getInner();
-//		ArrayList<String> mvs = board.getValidMoves();
+		// ArrayList<String> mvs = board.getValidMoves();
 		ArrayList<String> bestMoves = new ArrayList<String>();
-		for (int r = 0; r < b.length; r++){
+		for (int r = 0; r < b.length; r++) {
 			Player[] row = b[r];
 			if (row[0].equals(row[1]) && row[0].equals(this)) {
-				bestMoves.add(0, "c"+r);
+				bestMoves.add(0, "c" + r);
 			}
 		}
 		return ret;

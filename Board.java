@@ -60,7 +60,11 @@ public class Board {
 		return inner[0][0] == inner[1][1] && inner[0][0] == inner[2][2]
 				|| inner[0][2] == inner[1][1] && inner[1][1] == inner[2][0] ? inner[1][1] : null;
 	}
-	public Player[][] getInner(){return inner;}
+
+	public Player[][] getInner() {
+		return inner;
+	}
+
 	public ArrayList<String> getValidMoves() {
 		ArrayList<String> validMoves = new ArrayList<String>();
 		for (int r = 0; r < inner.length; r++)
@@ -132,12 +136,13 @@ public class Board {
 	public String niceRow(int rowNum) {
 		Player[] row = inner[rowNum];
 		String[] nice = new String[4];
-		nice[0] = Colors.BOLD +(rowNum+1) + Colors.RE;
+		nice[0] = Colors.BOLD + (rowNum + 1) + Colors.RE;
 		for (int i = 0; i < row.length; i++)
 			nice[i + 1] = row[i] == null ? " " : row[i].getSymbol();
 		return niceRow(nice);
 	}
-	public String niceRow(String[] row){
+
+	public String niceRow(String[] row) {
 		return "| " + String.join(" | ", row) + " |\n";
 	}
 

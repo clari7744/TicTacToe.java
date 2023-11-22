@@ -1,6 +1,7 @@
 
 //TODO: Finish colors
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TicTacToe {
 	private ArrayList<Player> players;
